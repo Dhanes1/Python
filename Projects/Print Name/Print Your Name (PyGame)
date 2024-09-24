@@ -1,0 +1,45 @@
+import pygame
+pygame.init()
+win_height=400
+win_width=600
+win=pygame.display.set_mode((win_width,win_height))
+pygame.display.set_caption("Print My Name")
+white=(255,255,255)
+blue=(0,0,255)
+red=(255,0,0)
+green=(0,255,0)
+black=(0,0,0)
+def draw_letter_d(x,y):
+    pygame.draw.line(win,black,[x,y],[x,y+100],5)
+    pygame.draw.arc(win,black,[x-50,y,100,100],270/180*3.14,90/180*3.14,5)
+def draw_letter_h(x,y):
+    pygame.draw.line(win,black,[x,y],[x,y+100],5)
+    pygame.draw.line(win,black,[x,y+50],[x+50,y+50],5)
+    pygame.draw.line(win,black,[x+50,y],[x+50,y+100],5)
+def draw_letter_a(x,y):
+    pygame.draw.line(win,black,[x+25,y],[x,y+100],5)
+    pygame.draw.line(win,black,[x+25,y],[x+50,y+100],5)
+    pygame.draw.line(win,black,[x+12.5,y+50],[x+25+12.5,y+50],5)
+def draw_letter_n(x,y):
+    pygame.draw.line(win,black,[x,y],[x,y+100],5)
+    pygame.draw.line(win,black,[x,y],[x+50,y+100],5)
+    pygame.draw.line(win,black,[x+50,y],[x+50,y+100],5)
+def draw_letter_e(x,y):
+    pygame.draw.line(win,black,[x,y],[x,y+100],5)
+    pygame.draw.line(win,black,[x,y],[x+50,y],5)
+    pygame.draw.line(win,black,[x,y+50],[x+50,y+50],5)
+    pygame.draw.line(win,black,[x,y+100],[x+50,y+100],5)
+def draw_letter_s(x,y):
+    pygame.draw.line(win,black,[x+25,y],[x+50,y],5)
+    pygame.draw.arc(win,black,[x,y,50,50],90/180*3.14,270/180*3.14,5)
+    pygame.draw.arc(win,black,[x,y+50,50,50],270/180*3.14,90/180*3.14,5)
+    pygame.draw.line(win,black,[x,y+100],[x+25,y+100],5)
+while True:
+    win.fill(white)
+    draw_letter_d(25,25)
+    draw_letter_h(100,25)
+    draw_letter_a(175,25)
+    draw_letter_n(175+75,25)
+    draw_letter_e(325,25)
+    draw_letter_s(400,25)
+    pygame.display.update()

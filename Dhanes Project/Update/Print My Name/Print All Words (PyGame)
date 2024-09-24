@@ -1,0 +1,138 @@
+import pygame
+pygame.init()
+win_height=700
+win_width=1366
+win=pygame.display.set_mode((win_width,win_height))
+pygame.display.set_caption("Print My Name")
+white=(255,255,255)
+blue=(0,0,255)
+red=(255,0,0)
+green=(0,255,0)
+black=(0,0,0)
+def draw_letter_a(x,y):
+    pygame.draw.line(win,black,[x+25,y],[x,y+100],5)
+    pygame.draw.line(win,black,[x+25,y],[x+50,y+100],5)
+    pygame.draw.line(win,black,[x+12.5,y+50],[x+25+12.5,y+50],5)
+def draw_letter_b(x, y):
+    pygame.draw.line(win, black, [x, y], [x, y + 100], 5)
+    pygame.draw.arc(win,black,[x-25,y,50,50], 270/180*3.14, 90/180*3.14,5)
+    pygame.draw.arc(win,black,[x-25,y+50,50,50], 270/180*3.14, 90/180*3.14,5)
+def draw_letter_c(x, y):
+    #pygame.draw.line(win,black,[x+25,y+2],[x+40,y+2],5)
+    pygame.draw.arc(win, black, [x, y, 50, 100], 70/180*3.14,270/160*3.14,5)
+def draw_letter_d(x,y):
+    pygame.draw.line(win,black,[x,y],[x,y+100],5)
+    pygame.draw.arc(win,black,[x-50,y,100,100],270/180*3.14,90/180*3.14,5)
+def draw_letter_e(x,y):
+    pygame.draw.line(win,black,[x,y],[x,y+100],5)
+    pygame.draw.line(win,black,[x,y],[x+50,y],5)
+    pygame.draw.line(win,black,[x,y+50],[x+50,y+50],5)
+    pygame.draw.line(win,black,[x,y+100],[x+50,y+100],5)
+def draw_letter_f(x, y):
+    pygame.draw.line(win, black, [x, y], [x + 50, y], 5)
+    pygame.draw.line(win, black, [x, y], [x, y + 100], 5)
+    pygame.draw.line(win, black, [x, y + 50], [x + 40, y + 50], 5)
+def draw_letter_g(x, y):
+    pygame.draw.arc(win,black,[x,y,70,100],80/180*3.14,270/180*3.14,5)
+    pygame.draw.line(win,black,[x+33,y+100],[x+33,y+70],5)
+    pygame.draw.line(win,black,[x+20,y+70],[x+33,y+70],5)
+def draw_letter_h(x,y):
+    pygame.draw.line(win,black,[x,y],[x,y+100],5)
+    pygame.draw.line(win,black,[x,y+50],[x+50,y+50],5)
+    pygame.draw.line(win,black,[x+50,y],[x+50,y+100],5)
+def draw_letter_i(x, y):
+    pygame.draw.line(win, black, [x, y], [x + 50, y], 5)
+    pygame.draw.line(win, black, [x + 25, y], [x + 25, y + 100], 5)
+    pygame.draw.line(win, black, [x, y + 100], [x + 50, y + 100], 5)
+def draw_letter_j(x, y):
+    pygame.draw.line(win, black, [x, y], [x + 50, y], 5)
+    pygame.draw.line(win, black, [x+25, y], [x + 25, y + 100], 5)
+    pygame.draw.arc(win,black,[x+5,y+80,25,20],180/180*3.14,0/180*3.14,5)
+def draw_letter_k(x, y):
+    pygame.draw.line(win, black, [x, y], [x, y + 100], 5)
+    pygame.draw.line(win, black, [x + 50, y], [x, y + 50], 5)
+    pygame.draw.line(win, black, [x, y + 50], [x + 50, y + 100], 5)
+def draw_letter_l(x, y):
+    pygame.draw.line(win, black, [x, y], [x, y + 100], 5)
+    pygame.draw.line(win, black, [x, y + 100], [x + 50, y + 100], 5)
+def draw_letter_m(x, y):
+    pygame.draw.line(win, black, [x, y], [x, y + 100], 5)
+    pygame.draw.line(win, black, [x, y], [x + 25, y + 50], 5)
+    pygame.draw.line(win, black, [x + 25, y + 50], [x + 50, y], 5)
+    pygame.draw.line(win, black, [x + 50, y], [x + 50, y + 100], 5)
+def draw_letter_n(x,y):
+    pygame.draw.line(win,black,[x,y],[x,y+100],5)
+    pygame.draw.line(win,black,[x,y],[x+50,y+100],5)
+    pygame.draw.line(win,black,[x+50,y],[x+50,y+100],5)
+def draw_letter_o(x, y):
+    pygame.draw.arc(win, black, [x, y, 50, 100], 0, 360 / 180 * 3.14, 5)
+def draw_letter_p(x, y):
+    pygame.draw.line(win, black, [x, y], [x, y + 100], 5)
+    pygame.draw.arc(win, black, [x-20, y, 50, 50], 270/180*3.14,90/180*3.14, 5)
+def draw_letter_q(x, y):
+    pygame.draw.arc(win, black, [x, y, 50, 100], 0, 360 / 180 * 3.14, 5)
+    pygame.draw.line(win, black, [x + 25, y + 50], [x + 50, y + 100], 5)
+def draw_letter_r(x, y):
+    pygame.draw.line(win, black, [x, y], [x, y + 100], 5)
+    pygame.draw.arc(win, black, [x, y, 50, 50], 0, 180 / 180 * 3.14, 5)
+def draw_letter_s(x, y):
+    pygame.draw.line(win, black, [x, y], [x + 50, y], 5)
+    pygame.draw.line(win, black, [x, y], [x, y + 50], 5)
+    pygame.draw.line(win, black, [x, y + 50], [x + 50, y + 100], 5)
+    pygame.draw.line(win, black, [x + 50, y + 100], [x, y + 100], 5)
+    pygame.draw.line(win, black, [x + 50, y + 100], [x + 50, y + 50], 5)
+def draw_letter_t(x, y):
+    pygame.draw.line(win, black, [x, y], [x + 50, y], 5)
+    pygame.draw.line(win, black, [x + 25, y], [x + 25, y + 100], 5)
+def draw_letter_u(x, y):
+    pygame.draw.line(win, black, [x, y], [x, y + 100], 5)
+    pygame.draw.line(win, black, [x + 50, y], [x + 50, y + 100], 5)
+    pygame.draw.arc(win, black, [x, y + 50, 50, 50], 0, 180 / 180 * 3.14, 5)
+def draw_letter_v(x, y):
+    pygame.draw.line(win, black, [x, y], [x + 25, y + 100], 5)
+    pygame.draw.line(win, black, [x + 50, y], [x + 25, y + 100], 5)
+def draw_letter_w(x, y):
+    pygame.draw.line(win, black, [x, y], [x + 16.67, y + 100], 5)
+    pygame.draw.line(win, black, [x + 33.33, y], [x + 16.67, y + 100], 5)
+    pygame.draw.line(win, black, [x + 33.33, y + 100], [x + 50, y], 5)
+def draw_letter_x(x, y):
+    pygame.draw.line(win, black, [x, y], [x + 50, y + 100], 5)
+    pygame.draw.line(win, black, [x + 50, y], [x, y + 100], 5)
+def draw_letter_y(x, y):
+    pygame.draw.line(win, black, [x, y], [x + 25, y + 50], 5)
+    pygame.draw.line(win, black, [x + 50, y], [x + 25, y + 50], 5)
+    pygame.draw.line(win, black, [x + 25, y + 50], [x + 25, y + 100], 5)
+def draw_letter_z(x, y):
+    pygame.draw.line(win, black, [x, y], [x + 50, y], 5)
+    pygame.draw.line(win, black, [x + 50, y], [x, y + 100], 5)
+    pygame.draw.line(win, black, [x, y + 100], [x + 50, y + 100], 5)
+
+for i in range(0,500):
+    win.fill(white)
+    draw_letter_a(25, 25)
+    draw_letter_b(100, 25)
+    draw_letter_c(175, 25)
+    draw_letter_d(250, 25)
+    draw_letter_e(325, 25)
+    draw_letter_f(400, 25)
+    draw_letter_g(475, 25)
+    draw_letter_h(550, 25)
+    draw_letter_i(625, 25)
+    draw_letter_j(700, 25)
+    draw_letter_k(775, 25)
+    draw_letter_l(850, 25)
+    draw_letter_m(925, 25)
+    draw_letter_n(1000, 25)
+    draw_letter_o(1075, 25)
+    draw_letter_p(1150, 25)
+    draw_letter_q(1200, 25)
+    draw_letter_r(1300, 25)
+    draw_letter_s(75, 175)
+    draw_letter_t(75+(75*1), 175)
+    draw_letter_u(75+(75*2), 175)
+    draw_letter_v(75+(75*3), 175)
+    draw_letter_w(75+(75*4), 175)
+    draw_letter_x(75+(75*5), 175)
+    draw_letter_y(75+(75*6), 175)
+    draw_letter_z(75+(75*7), 175)
+    pygame.display.update()

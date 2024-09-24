@@ -1,0 +1,25 @@
+from turtle import *
+width_var=int(input("Width of screen: "))
+height_var=int(input("Height of screen: "))
+t = Turtle()
+t.speed(30)
+t.width(4)
+screen = Screen()
+screen.bgcolor("white")
+screen.setup(width=width_var,height=height_var)
+t.penup()
+t.goto(10-(width_var/2),(height_var/2)-10)
+t.pendown()
+while height_var-20 > 0:
+    t.forward(width_var-20)
+    t.right(90)
+    t.forward(10)
+    t.right(90)
+    t.forward(width_var-20)
+    t.left(90)
+    t.forward(10)
+    t.left(90)
+    height_var-=20
+else:
+    t.forward(width_var-20)
+done()
